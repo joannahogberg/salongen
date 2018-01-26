@@ -26,8 +26,6 @@ class App extends Component {
     const renderView = showList ?  <Lista salonger={salonger} onClick={this.onClick} /> :  <EnSalong salonger={salonger} id={salongId} onClick={this.goBack} />;
     return (
       <div className="App">
-        <header className="App-header" />
-     
         {renderView}
       </div>
     );

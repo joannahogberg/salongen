@@ -50,7 +50,7 @@ function Lista(props) {
         <FontAwesome.FaList />
       </div>
       <div className="card-block">
-        <h4>Pris 250-350 kr</h4>
+        <h3>Pris 250-350 kr</h3>
         <FontAwesome.FaChevronDown />
       </div>
       {salong}
