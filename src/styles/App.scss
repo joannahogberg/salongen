@@ -30,10 +30,10 @@ span {
 .App {
     margin: 0 auto;
     max-width: 640px;
+    font-size: 1.6em;
 }
 
 .salong {
-    font-size: 1.6em;
     .card {
         background: $gray;
         .card-img-overlay {
@@ -112,7 +112,6 @@ span {
 }
 
 .lista {
-    font-size: 1.6em;
     @include flexbox;
     @include flex-direction(column);
     .card-block {
@@ -122,7 +121,7 @@ span {
         @include align-items(center);
         padding: 1em;
         border-bottom: 1px solid $gold;
-        h3 {
+        p {
             margin: 0;
         }
     }
