@@ -1,0 +1,167 @@
+@import 'library';
+html,
+body,
+nav,
+main,
+footer,
+div,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 62.5%;
+    letter-spacing: 0.03em;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'FontBureau'
+}
+
+ul {
+    list-style: none;
+}
+
+span {
+    margin: 0 0 0 0.5em;
+}
+
+.salong {
+    font-size: 1.4em;
+    .card {
+        background: $gray;
+        .card-img-overlay {
+            @include flexbox;
+            @include flex-direction(column);
+            .card-nav {
+                @include flexbox;
+                @include flex-direction(row);
+                @include justify-content(space-between);
+                svg {
+                    fill: white;
+                }
+            }
+            .card-block {
+                @include flexbox;
+                @include flex-direction(column);
+                @include justify-content(flex-end);
+                @include align-items(flex-start);
+                .card-text {
+                    position: relative;
+                    span {
+                        position: absolute;
+                        top: 0.2em;
+                    }
+                }
+            }
+        }
+        .card-block-top {
+            @include flexbox;
+            @include flex-direction(row);
+            @include justify-content(space-around);
+            @include align-items(flex-end);
+            background: white;
+            padding: 0;
+            margin: 0 0 2em;
+            .card-link {
+                width: 100%;
+                text-align: center;
+                padding: 1em 0;
+                color: $black;
+            }
+            a:first-child {
+                border-bottom: 1px solid $gold;
+            }
+        }
+        .list-group {
+            background: $white;
+            padding: 0 1em;
+            li {
+                padding: 1em 0;
+                border-bottom: 1px solid $gray;
+                position: relative;
+                display: block;
+            }
+            span {
+                vertical-align: middle;
+                display: inline-block;
+                line-height: 2.5;
+                text-align: center;
+            }
+            svg {
+                fill: $black;
+                margin: 0 0.5em 0 0;
+            }
+            >li:nth-child(2) {
+                svg:nth-child(3) {
+                    fill: $gold;
+                    margin: 0 0 0 0.5em;
+                }
+            }
+            >li:nth-child(5) {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.lista {
+    font-size: 1.4em;
+    @include flexbox;
+    @include flex-direction(column);
+    .card-block {
+        @include flexbox;
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        @include align-items(center);
+        padding: 1em;
+        // margin: 0 0 1em;
+        border-bottom: 1px solid $gold;
+        h4 {
+            margin: 0;
+        }
+    }
+    .list-group {
+        @include flexbox;
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        padding: 1em;
+        >li>ul>li {
+            padding: 0 0 0.2em;
+        }
+        >li:nth-child(1) {
+            width: 20%;
+            padding-top: 1em;
+        }
+        >li:nth-child(2) {
+            width: 60%;
+            >ul>li:nth-child(1) {
+                font-size: 1.7em;
+            }
+            >ul>li:nth-child(2) {
+                position: relative;
+                span {
+                    position: absolute;
+                    top: 0.1em;
+                }
+            }
+        }
+        >li:nth-child(3) {
+            width: 20%;
+            padding-top: 1em;
+            >ul>li>svg {
+                float: right;
+            }
+        }
+    }
+}
+
+svg {
+    display: inline-block;
+    vertical-align: middle;
+    // width: 1.5em;
+    // height: 1.5em;
+    font-size: 1.4em;
+    fill: $gold;
+}

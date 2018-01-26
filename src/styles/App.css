@@ -1,0 +1,214 @@
+/* Sass variables*/
+@font-face {
+  font-family: 'FontBureau';
+  src: local("MyFont"), url(../fonts/FontBureau.woff) format("woff"); }
+
+/*------------- Heading mixins*/
+/*------------- Breakpoints mixin*/
+/*------------- Flexbox mixins*/
+/*------------- Flexbox center mixin*/
+html,
+body,
+nav,
+main,
+footer,
+div,
+ul,
+li {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 62.5%;
+  letter-spacing: 0.03em;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'FontBureau'; }
+
+ul {
+  list-style: none; }
+
+span {
+  margin: 0 0 0 0.5em; }
+
+.salong {
+  font-size: 1.4em; }
+  .salong .card {
+    background: #f1f3f4; }
+    .salong .card .card-img-overlay {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .salong .card .card-img-overlay .card-nav {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: space-between; }
+        .salong .card .card-img-overlay .card-nav svg {
+          fill: white; }
+      .salong .card .card-img-overlay .card-block {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: flex-end;
+        -moz-justify-content: flex-end;
+        -ms-justify-content: flex-end;
+        justify-content: flex-end;
+        -ms-flex-pack: flex-end;
+        -webkit-align-items: flex-start;
+        -moz-align-items: flex-start;
+        -ms-align-items: flex-start;
+        align-items: flex-start; }
+        .salong .card .card-img-overlay .card-block .card-text {
+          position: relative; }
+          .salong .card .card-img-overlay .card-block .card-text span {
+            position: absolute;
+            top: 0.2em; }
+    .salong .card .card-block-top {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around;
+      -webkit-align-items: flex-end;
+      -moz-align-items: flex-end;
+      -ms-align-items: flex-end;
+      align-items: flex-end;
+      background: white;
+      padding: 0;
+      margin: 0 0 2em; }
+      .salong .card .card-block-top .card-link {
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+        color: #030303; }
+      .salong .card .card-block-top a:first-child {
+        border-bottom: 1px solid #B69F58; }
+    .salong .card .list-group {
+      background: #fff;
+      padding: 0 1em; }
+      .salong .card .list-group li {
+        padding: 1em 0;
+        border-bottom: 1px solid #f1f3f4;
+        position: relative;
+        display: block; }
+      .salong .card .list-group span {
+        vertical-align: middle;
+        display: inline-block;
+        line-height: 2.5;
+        text-align: center; }
+      .salong .card .list-group svg {
+        fill: #030303;
+        margin: 0 0.5em 0 0; }
+      .salong .card .list-group > li:nth-child(2) svg:nth-child(3) {
+        fill: #B69F58;
+        margin: 0 0 0 0.5em; }
+      .salong .card .list-group > li:nth-child(5) {
+        border-bottom: none; }
+
+.lista {
+  font-size: 1.4em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .lista .card-block {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 1px solid #B69F58; }
+    .lista .card-block h4 {
+      margin: 0; }
+  .lista .list-group {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    padding: 1em; }
+    .lista .list-group > li > ul > li {
+      padding: 0 0 0.2em; }
+    .lista .list-group > li:nth-child(1) {
+      width: 20%;
+      padding-top: 1em; }
+    .lista .list-group > li:nth-child(2) {
+      width: 60%; }
+      .lista .list-group > li:nth-child(2) > ul > li:nth-child(1) {
+        font-size: 1.7em; }
+      .lista .list-group > li:nth-child(2) > ul > li:nth-child(2) {
+        position: relative; }
+        .lista .list-group > li:nth-child(2) > ul > li:nth-child(2) span {
+          position: absolute;
+          top: 0.1em; }
+    .lista .list-group > li:nth-child(3) {
+      width: 20%;
+      padding-top: 1em; }
+      .lista .list-group > li:nth-child(3) > ul > li > svg {
+        float: right; }
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.4em;
+  fill: #B69F58; }
