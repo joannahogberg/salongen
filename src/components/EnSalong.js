@@ -18,7 +18,6 @@ function EnSalong(props) {
       noStars.push(<FontAwesome.FaStarO key={uuid.v4()} />);
     }
     const stars = fullStars.concat(noStars);
-    // style={{ width: "20rem" }}
     return (
       <div key={uuid.v4()} className="card">
         <div className="card card-inverse">

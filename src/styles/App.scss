@@ -34,7 +34,7 @@ span {
 }
 
 .salong {
-    .card {
+    >.card {
         background: $gray;
         .card-img-overlay {
             @include flexbox;
@@ -107,6 +107,30 @@ span {
             >li:nth-child(5) {
                 border-bottom: none;
             }
+        }
+    }
+}
+
+.card {
+    @include flexbox;
+    @include flex-direction(column);
+    >.card-block {
+        @include flexbox;
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        @include align-items(center);
+        padding: 1em;
+        border-bottom: 1px solid $gold;
+        .price-div {
+            @include flexbox;
+            @include flex-direction(row);
+            @include justify-content(space-between);
+            @include align-items(center);
+            width: 100%;
+            height: 2.4em;
+        }
+        .form-control {
+            margin: 0;
         }
     }
 }
