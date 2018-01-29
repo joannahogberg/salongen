@@ -4,9 +4,10 @@ $gold: #B69F58;
 $black: #030303;
 $gray: #f1f3f4;
 $white: #fff;
+
 @font-face {
     font-family: 'FontBureau';
-    src: local('MyFont'), url(../fonts/FontBureau.woff) format('woff');
+    src: local('MyFont'), url(../media/fonts/FontBureau.woff) format('woff');
 }
 
 
@@ -158,7 +159,7 @@ $breakpoints: ( 'xxsmall': ( min-width: 360px), 'xsmall': ( min-width: 375px), '
     filter: alpha(opacity=$opacity-ie); //IE8
 }
 
-// Mixin for buttons with background transparent 
+// Mixin for buttons with background transparent
 @mixin transparent-backgound($color: #fff, $value:0.5) {
     $start: "rgb(";
     $end: ")";

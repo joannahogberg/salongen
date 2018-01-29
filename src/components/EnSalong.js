@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'uuid';
 import * as FontAwesome from 'react-icons/lib/fa';
-import headerImg from '../utils/headerImg.png';
+import headerImg from '../media/images/headerImg.png';
 
 function EnSalong(props) {
   const salonger = props.salonger.filter(sal => sal.id === props.id);
@@ -51,7 +51,7 @@ function EnSalong(props) {
         <li><FontAwesome.FaPhone /> <span>08-522 389 20</span></li>
         <li><FontAwesome.FaGlobe /><span className="text-lowercase"> www.{sal.name.replace(/\s/g,'').replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/&/g, '-')}.se</span></li>
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-        </ul>   
+        </ul>
       </div>
     );
   });

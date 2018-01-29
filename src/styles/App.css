@@ -1,7 +1,7 @@
 /* Sass variables*/
 @font-face {
   font-family: 'FontBureau';
-  src: local("MyFont"), url(../fonts/FontBureau.woff) format("woff"); }
+  src: local("MyFont"), url(../media/fonts/FontBureau.woff) format("woff"); }
 
 /*------------- Heading mixins*/
 /*------------- Breakpoints mixin*/

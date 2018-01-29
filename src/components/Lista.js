@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as FontAwesome from 'react-icons/lib/fa'
-import salonger from '../utils/salonger';
+import salonger from '../data/salonger';
 import Select from "./Select.js";
 import SortedList from './SortedList';
 import EnSalong from './EnSalong';
@@ -50,7 +50,7 @@ const filterSalongs = salonger.filter((sal) =>{
 
 );
 
- 
+
     this.setState({ salongerByFilter: filterSalongs, showSelect: false, priceRange, filter: true });
 
   }
@@ -59,14 +59,14 @@ const filterSalongs = salonger.filter((sal) =>{
     const {salongId, salonger,salongerByFilter, showList, filter, showSelect, priceRange} = this.state;
    let salongerToShow =  filter? salongerByFilter : salonger;
     const renderView = showList ?  <SortedList salonger={salongerToShow} onClick={this.showSingle} /> :  <EnSalong salonger={salongerToShow} id={salongId} onClick={this.goBack} />;
-    
+
     const renderSelect = !showSelect ?  <div className="price-div">
     <span>{priceRange}</span>
     <FontAwesome.FaChevronDown onClick={this.onClick}/>
-  </div> : 
+  </div> :
        <Select onChange={this.filterByPrice} value={filter}/>
        ;
-    
+
     return (
       <div className="card">
        {showList &&
@@ -80,7 +80,7 @@ const filterSalongs = salonger.filter((sal) =>{
     <div className="card-block">
        {renderSelect}
        </div>
-      }   
+      }
         {renderView}
       </div>
     );
@@ -88,4 +88,3 @@ const filterSalongs = salonger.filter((sal) =>{
 }
 
 export default Lista;
-
