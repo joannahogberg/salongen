@@ -1,192 +1,155 @@
 @import 'library';
-html,
+
 body,
-nav,
-main,
-footer,
 div,
-ul,
-li {
-    margin: 0;
-    padding: 0;
+footer,
+html,
+li,
+main,
+nav,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-size: 62.5%;
-    letter-spacing: 0.03em;
-    width: 100%;
-    margin: 0 auto;
-    font-family: 'FontBureau'
+  font-family: 'FontBureau';
+}
+
+h3,
+.h3 {
+  font-size: 1.25rem;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 span {
-    margin: 0 0 0 0.5em;
+  margin: 0 0 0 0.5em;
 }
 
-.App {
-    margin: 0 auto;
-    max-width: 640px;
-    font-size: 1.6em;
-}
-
-.salong {
-    >.card {
-        background: $gray;
-        .card-img-overlay {
-            @include flexbox;
-            @include flex-direction(column);
-            .card-nav {
-                @include flexbox;
-                @include flex-direction(row);
-                @include justify-content(space-between);
-                svg {
-                    fill: white;
-                }
-            }
-            .card-block {
-                @include flexbox;
-                @include flex-direction(column);
-                @include justify-content(flex-end);
-                @include align-items(flex-start);
-                .card-text {
-                    position: relative;
-                    span {
-                        position: absolute;
-                        top: 0.2em;
-                    }
-                }
-            }
-        }
-        .card-block-top {
-            @include flexbox;
-            @include flex-direction(row);
-            @include justify-content(space-around);
-            @include align-items(flex-end);
-            background: white;
-            padding: 0;
-            margin: 0 0 2em;
-            .card-link {
-                width: 100%;
-                text-align: center;
-                padding: 1em 0;
-                color: $black;
-            }
-            a:first-child {
-                border-bottom: 1px solid $gold;
-            }
-        }
-        .list-group {
-            background: $white;
-            padding: 0 1em;
-            li {
-                padding: 1em 0;
-                border-bottom: 1px solid $gray;
-                position: relative;
-                display: block;
-            }
-            span {
-                vertical-align: middle;
-                display: inline-block;
-                line-height: 2.5;
-                text-align: center;
-            }
-            svg {
-                fill: $black;
-                margin: 0 0.5em 0 0;
-            }
-            >li:nth-child(2) {
-                svg:nth-child(3) {
-                    fill: $gold;
-                    margin: 0 0 0 0.5em;
-                }
-            }
-            >li:nth-child(5) {
-                border-bottom: none;
-            }
-        }
-    }
+.view {
+  margin: 0 auto;
+  max-width: 640px;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .card {
+  @include flexbox;
+  @include flex-direction(column);
+  border-radius: 0;
+  border: 0 none;
+
+  > .card-block {
     @include flexbox;
-    @include flex-direction(column);
-    >.card-block {
-        @include flexbox;
-        @include flex-direction(row);
-        @include justify-content(space-between);
-        @include align-items(center);
-        padding: 1em;
-        border-bottom: 1px solid $gold;
-        .price-div {
-            @include flexbox;
-            @include flex-direction(row);
-            @include justify-content(space-between);
-            @include align-items(center);
-            width: 100%;
-            height: 2.4em;
-        }
-        .form-control {
-            margin: 0;
-        }
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding: 1em;
+    border-bottom: 1px solid $gold;
+
+    .price-div {
+      @include flexbox;
+      @include flex-direction(row);
+      @include justify-content(space-between);
+      @include align-items(center);
+      width: 100%;
+      height: 2.4em;
     }
+
+    .form-control {
+      margin: 0;
+    }
+  }
 }
 
 .lista {
+  @include flexbox;
+  @include flex-direction(column);
+
+  .card-block {
     @include flexbox;
-    @include flex-direction(column);
-    .card-block {
-        @include flexbox;
-        @include flex-direction(row);
-        @include justify-content(space-between);
-        @include align-items(center);
-        padding: 1em;
-        border-bottom: 1px solid $gold;
-        p {
-            margin: 0;
-        }
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding: 1em;
+    border-bottom: 1px solid $gold;
+
+    p {
+      margin: 0;
     }
-    .list-group {
-        @include flexbox;
-        @include flex-direction(row);
-        @include justify-content(space-between);
-        padding: 1em;
-        >li>ul>li {
-            padding: 0 0 0.2em;
-        }
-        >li:nth-child(1) {
-            width: 20%;
-            padding-top: 1em;
-        }
-        >li:nth-child(2) {
-            width: 55%;
-            >ul>li:nth-child(1) {
-                font-size: 1.7em;
-            }
-            >ul>li:nth-child(2) {
-                position: relative;
-                span {
-                    position: absolute;
-                    top: 0.1em;
-                }
-            }
-        }
-        >li:nth-child(3) {
-            width: 25%;
-            padding-top: 1em;
-            >ul>li>svg {
-                float: right;
-            }
-        }
+  }
+
+  .list-group {
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    padding: 1em;
+
+    > li > ul > li {
+      padding: 0 0 0.2em;
     }
+
+    > li:nth-child(1) {
+      width: 20%;
+      padding-top: 1em;
+    }
+
+    > li:nth-child(2) {
+      width: 55%;
+
+      > ul > li:nth-child(1) {
+        font-size: 1.7em;
+      }
+
+      > ul > li:nth-child(2) {
+        position: relative;
+
+        span {
+          position: absolute;
+          top: 0.1em;
+        }
+      }
+    }
+
+    > li:nth-child(3) {
+      width: 25%;
+      padding-top: 1em;
+
+      > ul > li > svg {
+        float: right;
+      }
+    }
+  }
+}
+
+// Tab group
+.card-block-top {
+  @include flexbox;
+  @include flex-direction(row);
+  @include justify-content(space-around);
+  @include align-items(flex-end);
+  background: white;
+  padding: 0;
+  margin: 0 0 2em;
+
+  .card-link {
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    color: $black;
+  }
+
+  a:first-child {
+    border-bottom: 1px solid $gold;
+  }
 }
 
 svg {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 1.4em;
-    fill: $gold;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.4em;
+  fill: $gold;
 }

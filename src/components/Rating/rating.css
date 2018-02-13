@@ -1,0 +1,5 @@
+.rating {
+  display: flex;
+  flex-direction: row; }
+  .rating svg {
+    font-size: 1rem; }

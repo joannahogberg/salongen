@@ -1,29 +1,29 @@
 /* Sass variables*/
 @font-face {
   font-family: 'FontBureau';
-  src: local("MyFont"), url(../fonts/FontBureau.woff) format("woff"); }
+  src: local("MyFont"), url(../media/fonts/FontBureau.woff) format("woff"); }
 
 /*------------- Heading mixins*/
 /*------------- Breakpoints mixin*/
 /*------------- Flexbox mixins*/
 /*------------- Flexbox center mixin*/
-html,
 body,
-nav,
-main,
-footer,
 div,
-ul,
-li {
+footer,
+html,
+li,
+main,
+nav,
+ul {
   margin: 0;
   padding: 0; }
 
 body {
-  font-size: 62.5%;
-  letter-spacing: 0.03em;
-  width: 100%;
-  margin: 0 auto;
   font-family: 'FontBureau'; }
+
+h3,
+.h3 {
+  font-size: 1.25rem; }
 
 ul {
   list-style: none; }
@@ -31,114 +31,11 @@ ul {
 span {
   margin: 0 0 0 0.5em; }
 
-.App {
+.view {
   margin: 0 auto;
   max-width: 640px;
-  font-size: 1.6em; }
-
-.salong > .card {
-  background: #f1f3f4; }
-  .salong > .card .card-img-overlay {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    .salong > .card .card-img-overlay .card-nav {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: row;
-      -moz-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      -ms-justify-content: space-between;
-      justify-content: space-between;
-      -ms-flex-pack: space-between; }
-      .salong > .card .card-img-overlay .card-nav svg {
-        fill: white; }
-    .salong > .card .card-img-overlay .card-block {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-justify-content: flex-end;
-      -moz-justify-content: flex-end;
-      -ms-justify-content: flex-end;
-      justify-content: flex-end;
-      -ms-flex-pack: flex-end;
-      -webkit-align-items: flex-start;
-      -moz-align-items: flex-start;
-      -ms-align-items: flex-start;
-      align-items: flex-start; }
-      .salong > .card .card-img-overlay .card-block .card-text {
-        position: relative; }
-        .salong > .card .card-img-overlay .card-block .card-text span {
-          position: absolute;
-          top: 0.2em; }
-  .salong > .card .card-block-top {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: space-around;
-    -webkit-align-items: flex-end;
-    -moz-align-items: flex-end;
-    -ms-align-items: flex-end;
-    align-items: flex-end;
-    background: white;
-    padding: 0;
-    margin: 0 0 2em; }
-    .salong > .card .card-block-top .card-link {
-      width: 100%;
-      text-align: center;
-      padding: 1em 0;
-      color: #030303; }
-    .salong > .card .card-block-top a:first-child {
-      border-bottom: 1px solid #B69F58; }
-  .salong > .card .list-group {
-    background: #fff;
-    padding: 0 1em; }
-    .salong > .card .list-group li {
-      padding: 1em 0;
-      border-bottom: 1px solid #f1f3f4;
-      position: relative;
-      display: block; }
-    .salong > .card .list-group span {
-      vertical-align: middle;
-      display: inline-block;
-      line-height: 2.5;
-      text-align: center; }
-    .salong > .card .list-group svg {
-      fill: #030303;
-      margin: 0 0.5em 0 0; }
-    .salong > .card .list-group > li:nth-child(2) svg:nth-child(3) {
-      fill: #B69F58;
-      margin: 0 0 0 0.5em; }
-    .salong > .card .list-group > li:nth-child(5) {
-      border-bottom: none; }
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+  border-right: 1px solid rgba(0, 0, 0, 0.12); }
 
 .card {
   display: -webkit-box;
@@ -149,7 +46,9 @@ span {
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  border-radius: 0;
+  border: 0 none; }
   .card > .card-block {
     display: -webkit-box;
     display: -moz-box;
@@ -263,6 +162,36 @@ span {
       padding-top: 1em; }
       .lista .list-group > li:nth-child(3) > ul > li > svg {
         float: right; }
+
+.card-block-top {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: space-around;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+  background: white;
+  padding: 0;
+  margin: 0 0 2em; }
+  .card-block-top .card-link {
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    color: #030303; }
+  .card-block-top a:first-child {
+    border-bottom: 1px solid #B69F58; }
 
 svg {
   display: inline-block;
